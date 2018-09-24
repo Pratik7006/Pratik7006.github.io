@@ -1,0 +1,10 @@
+#slide-text{
+	background-color: #accb36a1;
+
+}
+@media screen and (max-width:767px) {
+        #slide-text{ background-color: #fff;}
+    }
+body{
+	background-color: #eeeeee;
+}
