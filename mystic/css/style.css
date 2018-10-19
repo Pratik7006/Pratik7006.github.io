@@ -1,0 +1,83 @@
+#slide-text{
+	color: black;
+}
+@media screen and (max-width:767px) {
+        #slide-text{ background-color: #fff;}
+    }
+body{
+	background-color: #eeeeee;
+}
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("../img/mystic.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form-control{
+    border-bottom-color: #09c;
+}
+
+.parallax1 {
+    /* The image used */
+    background: url("../img/mystic8.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* Set a specific height */
+    
+
+    /* Create the parallax scrolling effect */
+   
+}
+.parallax2 {
+    /* The image used */
+    background: url("../img/mystic7.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* Set a specific height */
+    
+
+    /* Create the parallax scrolling effect */
+}
+.parallax3 {
+    /* The image used */
+    background: url("../img/mystic9.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /* Set a specific height */
+    
+
+    /* Create the parallax scrolling effect */
+}
+
+.rgba-blue-strong{
+    background-color: rgba(2,119,189,0.7)
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) 
+{ 
+    .float-right
+    {
+        float: none;
+
+    }
+
+    }
