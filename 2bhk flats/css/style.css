@@ -47,3 +47,21 @@ header,
 		position: absolute;
 	    /* float: right; */
 	
+
+ /* cards style    */
+ /* cards style */
+.card-read{
+    color: #fff;
+}
+.card-title{
+    color: #ED7D2F;
+}
+.hoverable:hover{
+    border: 1px solid orange;
+    border-bottom: none;
+}
+#theImg{
+    position: absolute;
+    top:  5%;
+    left: 3%;
+}

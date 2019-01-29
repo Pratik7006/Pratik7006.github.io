@@ -13,3 +13,8 @@ function growShrinkLogo() {
     Logo.src='./img/kp.png';
   }
 }
+
+// rera logo
+
+$(".overlay").append("<img id='theImg' src='./img/re.png'/>");
+
