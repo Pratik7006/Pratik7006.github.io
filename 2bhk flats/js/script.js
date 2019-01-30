@@ -18,3 +18,12 @@ function growShrinkLogo() {
 
 $(".overlay").append("<img id='theImg' src='./img/re.webp'/>");
 
+// display remaining projects
+
+var button = document.getElementById('show_button')
+    button.addEventListener('click',hideshow,false);
+
+    function hideshow() {
+        document.getElementById('readMore').style.display = 'block'; 
+        this.style.display = 'none'
+    } 
