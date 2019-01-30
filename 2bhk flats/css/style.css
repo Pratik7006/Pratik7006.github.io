@@ -67,3 +67,20 @@ body,
 .view_more{
     background-color: #ED7D2F !important;  
 }
+
+    /*  @media only screen and (max-device-width: 950px) {
+  .fix-modal {
+     width: 100%;
+    position: fixed;
+    z-index: 5;
+    left: -1%;
+    top: 93%;
+} */
+
+.fix-modal {
+        transform :rotate(90deg);
+          z-index : 5;
+             top: 50%;
+             left: 91%;
+             position: fixed;
+}

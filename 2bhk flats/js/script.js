@@ -5,12 +5,17 @@ window.onscroll = function() {
 
 function growShrinkLogo() {
   var Logo = document.getElementById("Logo")
-  if (document.body.scrollTop > 3 || document.documentElement.scrollTop < 5) {
+  if (document.body.scrollTop > 3 || document.documentElement.scrollTop < 1) {
     Logo.style.width = '200px';
     Logo.src='./img/rera.webp';
+  	var element = document.getElementById("enquire");
+  	element.classList.remove("fix-modal");
   } else {
     Logo.style.width = '50px';
     Logo.src='./img/kp.webp';
+    var element = document.getElementById("enquire");
+    // alert(element);	
+  	element.classList.add("fix-modal");
   }
 }
 
@@ -27,3 +32,17 @@ var button = document.getElementById('show_button')
         document.getElementById('readMore').style.display = 'block'; 
         this.style.display = 'none'
     } 
+
+
+// modal
+
+// var sOffset = $(".fix-modal").offset().top;
+// var shareheight = $(".fix-modal").height() + 43;
+// $(window).scroll(function() {
+//     var scrollYpos = $(document).scrollTop();
+//     if (scrollYpos > sOffset - shareheight) {
+//     	// alert('down');
+        
+//     } 
+// });
+
