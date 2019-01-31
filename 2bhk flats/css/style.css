@@ -84,3 +84,53 @@ body,
              left: 91%;
              position: fixed;
 }
+
+@media only screen and (max-width: 600px) {
+  .fix-modal {
+            width: 101%;
+            position: fixed;
+            z-index: 5;
+            left: -2%;
+            transform: none;
+            top: 92%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .fix-modal {
+            position: fixed;
+            z-index: 5;
+            left: 87%;
+            top: 50%;
+  }
+}
+@media only screen and (min-width:1024px) and (max-width: 1366px) {
+  .fix-modal {
+          
+            left: 90%;
+  }
+}
+@media only screen and (min-width:360px) {
+ #intro{
+    height: 106%;
+  }
+}
+
+ @media only screen and (min-width:411px) and (max-width: 731px) {
+ #intro{
+    height: 82%;
+  }
+  .fix-modal{
+    top: 93%;
+  }
+  .card-deck{
+        width: 115%;
+  }
+}
+
+@media only screen and (min-width:375px) and (max-width: 667px) {
+  .card-deck{
+    width: 100%;
+  }
+}
