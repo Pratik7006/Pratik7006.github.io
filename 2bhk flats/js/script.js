@@ -5,17 +5,19 @@ window.onscroll = function() {
 
 function growShrinkLogo() {
   var Logo = document.getElementById("Logo")
-  if (document.body.scrollTop > 3 || document.documentElement.scrollTop < 1) {
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop < 3) {
     Logo.style.width = '200px';
     Logo.src='./img/rera.webp';
   	var element = document.getElementById("enquire");
   	element.classList.remove("fix-modal");
+  	element.classList.remove("btn-light");
   } else {
     Logo.style.width = '50px';
     Logo.src='./img/kp.webp';
     var element = document.getElementById("enquire");
     // alert(element);	
   	element.classList.add("fix-modal");
+  	
   }
 }
 
@@ -45,4 +47,7 @@ var button = document.getElementById('show_button')
         
 //     } 
 // });
+function user_submit(){
+var user_name = document.getElementById("user_name").value;
 
+}
