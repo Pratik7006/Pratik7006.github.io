@@ -1,0 +1,132 @@
+.header nav.menu > ul > li {
+    padding: 0px 15px !important	;
+}
+.header.transparent-header nav.menu > ul>li>a {
+    color: #2e9cca !important;
+}
+
+
+.header nav.menu .cr-megamenu-wrap {
+    position: absolute;
+    background: #29648a !important;
+}
+.cr-btn, a.cr-btn, button.cr-btn {
+    background: #e42221 !important;
+    }
+
+.header nav.menu .cr-megamenu-single {
+    border-right: none !important;
+}
+
+.header nav.menu li.cr-dropdown ul {
+background-color: #2e9cca !important;
+}
+
+.mobile-logo>img{
+width: 50%;
+}
+
+
+.latest{
+	display: flex;
+	justify-content: center;
+
+}
+
+.header {
+    border-bottom: 1px solid #2e9cca !important;
+}
+
+.latest-news {
+background-color: #4abdac;
+color: #fff !important;	
+
+}
+.latest-news>p {
+	color: #fff !important;
+}
+.latest-news>h3{
+	color: #fff !important;
+}
+
+.emp-news {
+background-color: #4abdac;
+color: #fff !important;	
+padding: 10px;
+overflow:hidden;
+  
+}
+
+.emp-news>p {
+	color: #fff !important;
+}
+.emp-news>h3{
+	color: #fff !important;
+}
+.emp-news {
+background-color: #2e9cca;
+color: #fff !important;	
+padding: 10px;
+width:100%;
+height:102%;
+overflow:hidden;
+  
+}
+
+.emp-news>p {
+	color: #fff !important;
+}
+.emp-news>h3{
+	color: #fff !important;
+}
+
+.holder .mask {
+  position: relative;
+  left: 0px;
+  top: 5px;
+  height:240px;
+  overflow: hidden;
+}
+.holder ul {
+ list-style: none;
+  margin:0;
+  padding-left:25px;
+  position: relative;
+}
+.holder ul  li a:hover{
+  color: blue;
+}
+.holder ul li a {
+  color:#fff;
+  text-decoration:none;
+}
+#news-item{
+color: #fff !important;
+
+}
+#news-item:hover{
+color: blue !important;
+}
+@media (min-width: 768px)
+{
+.col-md-5 {
+    -ms-flex:0 0 45% !important;
+    flex: 0 0 45% !important;
+    max-width: 45.666667% !important;
+    }
+}
+.section-title{
+	padding-top: 10px;
+	margin-bottom: 5px !important;
+}
+.header nav.menu .cr-megamenu-wrap {
+  justify-content: space-around !important;
+}
+
+.footer-social li a {
+	color: #2e9cca !important;
+}
+
+p.footer-copyright {
+	color: #2e9cca !important;
+}    
