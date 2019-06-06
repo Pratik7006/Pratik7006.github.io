@@ -84,13 +84,13 @@ overflow:hidden;
   position: relative;
   left: 0px;
   top: 5px;
-  height:240px;
+  height:340px;
   overflow: hidden;
 }
 .holder ul {
  list-style: none;
   margin:0;
-  padding-left:25px;
+  padding-left:11px;
   position: relative;
 }
 .holder ul  li a:hover{
@@ -116,7 +116,7 @@ color: blue !important;
     }
 }
 .section-title{
-	padding-top: 10px;
+	padding-top: 5px;
 	margin-bottom: 5px !important;
 }
 .header nav.menu .cr-megamenu-wrap {
@@ -130,3 +130,61 @@ color: blue !important;
 p.footer-copyright {
 	color: #2e9cca !important;
 }    
+#ticker01>ul>a>li{
+  font-size: 12px !important;
+}
+.fa-phone,.fa-map-marker, .fa-envelope{
+  font-size: 20px !important;
+  color: #2e9cca;
+}
+.magazine{
+  display: flex;
+  justify-content: center;
+  background-color: #2e9cca9e;
+}
+.section-padding-lg{
+  padding-bottom: 50px !important;
+}
+
+
+/* carousel */
+
+/* equal card height */
+.row-equal > div[class*='col-'] {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.row-equal .card {
+   width: 100%;
+}
+
+/* ensure equal card height inside carousel */
+.carousel-inner>.row-equal.active, 
+.carousel-inner>.row-equal.next, 
+.carousel-inner>.row-equal.prev {
+    display: flex;
+}
+
+/* prevent flicker during transition */
+.carousel-inner>.row-equal.active.left, 
+.carousel-inner>.row-equal.active.right {
+    opacity: 0.5;
+    display: flex;
+}
+
+
+/* control image height */
+.card-img-top-250 {
+    max-height: 300px;
+    overflow:hidden;
+}
+
+.publication{
+  background-color: #eaeaea;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #2e9cca !important;
+    }
