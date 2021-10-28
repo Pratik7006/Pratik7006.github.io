@@ -5,7 +5,9 @@
 	transition: 0.3s;
 }
 .social:hover{
-	font-size: 30px;
+	transform: scale(2.5);
+	cursor: pointer;
+	
 }
 
 .profile-image{
@@ -23,6 +25,15 @@
  border-bottom: 5px solid #fff;
  border-left: 5px solid #fff;
  border-radius: 50%;
+}
+
+.project-image{
+	transition: 0.3s;
+	width: 80%;
+}
+.project-image:hover{
+	transform: translate(-7px, -7px);
+	box-shadow: 10px 10px 20px #020530;
 }
 
 .page-header {
