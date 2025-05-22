@@ -4,44 +4,368 @@
 .social{
 	transition: 0.3s;
 }
+
+/* Navbar Enhancements - Social Icon Hover */
 .social:hover{
-	transform: scale(2.5);
+	transform: scale(1.3); /* More subtle scaling */
 	cursor: pointer;
-	
+	/* opacity: 1; /* Ensuring hovered icon is fully opaque if base opacity is changed */
+}
+/* End Navbar Enhancements - Social Icon Hover */
+
+/* Interactive Elements Enhancements - Profile Image */
+.profile-image{
+	border-top: 2px solid #fff; /* Retained original border for consistency */
+	border-right: 2px solid #fff; /* Retained original border for consistency */
+    /* Combined and updated transition properties */
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, border-top-color 0.3s ease, border-right-color 0.3s ease;
+	width: 80%; /* Retained original width */
+    border-left: 2px solid transparent; /* Adding transparent borders to prevent layout shift on hover */
+    border-bottom: 2px solid transparent; /* Adding transparent borders to prevent layout shift on hover */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
 }
 
-.profile-image{
-	border-top: 2px solid #fff;
-	border-right: 2px solid #fff;
-	transition: 0.3s;
-	transition-property: border;
-	transition-duration: 0.4s;
-	width: 80%;
-}
 .profile-image:hover{
- transform: scale(1.1);
- border-top:none; 
- border-right: none;
- border-bottom: 5px solid #fff;
- border-left: 5px solid #fff;
- border-radius: 50%;
+    transform: scale(1.05); /* Subtle scaling */
+    /* box-shadow: 0 12px 25px rgba(0,0,0,0.18); /* Optional: Enhanced shadow */
+    /* The border-color will affect all sides. To maintain the top/right white and change others to primary: */
+    border-top-color: var(--primary); /* Change border color to primary accent on hover */
+    border-right-color: var(--primary); /* Change border color to primary accent on hover */
+    border-left-color: var(--primary); /* Ensure these also change if they were originally transparent or different */
+    border-bottom-color: var(--primary); /* Ensure these also change if they were originally transparent or different */
+    /* Removed old border & border-radius changes */
 }
+/* End Interactive Elements Enhancements - Profile Image */
 
 .project-image{
 	transition: 0.3s;
 	width: 80%;
 }
+/* --- Removed old .project-image:hover style as per new design ---
 .project-image:hover{
 	transform: translate(-7px, -7px);
 	box-shadow: 10px 10px 20px #020530;
 }
+*/
 
-.page-header {
-    min-height: 600px !important;
+/* --- Project Showcase Enhancements --- */
+.project-item {
+    position: relative; 
+    overflow: hidden;   
+    border-radius: 0.2857rem; /* Consistent with Bootstrap's default card radius */
+    margin: 0.75rem; /* Spacing around each item */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Softer base shadow */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    background-color: #27293d; /* Add a subtle background in case images don't load or have transparency */
 }
+
+.project-item:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 25px rgba(0,0,0,0.12); 
+}
+
+.project-item img.project-image {
+    display: block; /* Remove extra space below image */
+    width: 100%;
+    height: auto;   /* Maintain aspect ratio */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother, slightly slower scale */
+}
+
+.project-item:hover img.project-image {
+    transform: scale(1.12); /* Slightly more pronounced scale */
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center; 
+    opacity: 0;
+    transition: opacity 0.4s ease-out; /* Smoother opacity transition */
+    padding: 25px 20px; /* More padding */
+    text-align: center;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h4 {
+    font-size: 1.35rem; /* Slightly larger title */
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #fff; 
+    transform: translateY(15px);
+    transition: transform 0.35s ease-out 0.1s; /* Staggered animation */
+}
+
+.project-overlay p {
+    font-size: 0.9rem; /* Slightly larger description */
+    color: #e0e0e0; 
+    margin-bottom: 0;
+    transform: translateY(15px);
+    transition: transform 0.35s ease-out 0.15s; /* Staggered animation */
+}
+
+.project-item:hover .project-overlay h4,
+.project-item:hover .project-overlay p {
+    transform: translateY(0);
+}
+/* --- End Project Showcase Enhancements --- */
+
+/* --- Hero Section Enhancements --- */
+.page-header {
+    min-height: 100vh !important; /* Make hero section full viewport height. Added !important to ensure override. */
+    display: flex; /* Add flex to help with vertical centering of the container */
+    align-items: center; /* Vertically center the inner container */
+}
+
+.page-header .dots,
+.page-header .path {
+    display: none !important; /* Hiding default decorative elements */
+}
+
+.page-header .text-on-back {
+    display: none !important; /* Hiding theme's background text like '01' */
+}
+/* --- End Hero Section Enhancements --- */
+
 .work{
 	margin: 0 auto;
 }
 .logo{
 	width: 10%;
 }
+
+/* --- Color Palette Update --- */
+:root {
+  --primary: #E91E63; /* New Primary Accent: Vibrant Pink/Magenta */
+  --primary-rgb: 233, 30, 99; /* RGB components of primary color for box-shadow */
+  /* Secondary Accent will be --success: #00f2c3 (Vibrant Teal/Cyan) from blk-design-system.css */
+}
+
+body {
+  color: #E0E0E0; /* Lighter body text for dark theme */
+}
+
+/* Typography Enhancements - General Heading Weights (if not overridden) */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: #f5f5f5; /* Light grey/off-white for headings */
+  font-weight: 600; /* Default to a bolder weight */
+}
+
+/* Navbar Enhancements - Background Color and Border */
+.navbar {
+	background-color: var(--primary) !important; /* Updated Navbar to new primary color (Verified) */
+}
+
+.navbar:not(.navbar-transparent) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Subtle light border for dark navbar */
+}
+/* End Navbar Enhancements - Background Color and Border */
+
+/* --- End Color Palette Update --- */
+
+/* --- Layout and Spacing Adjustments --- */
+
+/* Body Reset */
+/* body reset for margin and padding is here, but font-weight and size for p is below */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Section Padding */
+.section {
+	padding: 100px 0;
+}
+
+.page-header .container.align-items-center {
+	padding-top: 5vh;
+}
+
+/* --- End Layout and Spacing Adjustments --- */
+
+/* --- Typography Enhancements --- */
+
+/* Typography Enhancements - Body Text */
+p {
+    font-weight: 400; /* Default from blk-design-system might be 300 */
+    font-size: 0.9375rem; /* Slightly increase from default 0.875rem */
+    line-height: 1.65;   /* Adjust for better readability */
+}
+
+/* Typography Enhancements - Hero Section Title */
+.page-header .profile-title { /* This rule is specific to the .profile-title in .page-header */
+    font-size: 3.8rem;  /* Increase for impact */
+    font-weight: 700;   /* Make it bolder */
+    letter-spacing: -1px; /* Optional: Tighten spacing for large display text */
+}
+
+/* Typography Enhancements - Profile Description */
+.profile-description {
+    font-size: 1rem;     /* Ensure it's distinct and readable */
+    line-height: 1.75;   /* More line height for this paragraph */
+    /* font-weight: 400; -- Will inherit from general 'p' style */
+}
+
+/* Typography Enhancements - Work Section Title & Spacing */
+h1.work { /* This combines previous spacing with new typography */
+	margin-top: 30px;
+	margin-bottom: 50px;
+    font-size: 3rem;  /* Prominent section title */
+    font-weight: 600;
+    text-transform: uppercase; /* Optional: for a more stylized look */
+    letter-spacing: 1px;     /* Optional: for uppercase */
+}
+
+/* Typography Enhancements - Contact Section Title & Spacing */
+/* Adjusted selector to be more specific to contact section if needed, this was .card-header h1.profile-title */
+.section .card-plain .card-header .profile-title {
+	margin-bottom: 30px; /* Retaining spacing rule */
+    font-size: 3rem;  /* Consistent with Work section title */
+    font-weight: 600;
+    text-transform: uppercase; /* Optional: for a more stylized look */
+    letter-spacing: 1px;     /* Optional: for uppercase */
+}
+/* --- End Typography Enhancements --- */
+
+/* --- Contact Form Enhancements --- */
+.section .card-plain .form-control {
+    border-color: #4A4A4A; /* A slightly more visible border */
+    background-color: #27293d; /* Dark grey background for inputs */
+    color: #E0E0E0; /* Light text color for input */
+}
+
+.section .card-plain .form-control::placeholder {
+    color: #888; /* Visible but distinct placeholder text */
+}
+
+.section .card-plain .form-control:focus {
+    border-color: var(--primary);       /* Use primary accent for focus border */
+    background-color: #1e1e2f; /* Slightly different dark shade on focus */
+    color: #E0E0E0;                   /* Ensure text color remains light */
+    box-shadow: 0 0 0 0.2rem rgba(var(--primary-rgb), 0.25); /* Subtle glow effect with primary color */
+}
+
+.section .card-plain .form-group label {
+    color: rgba(255, 255, 255, 0.75); /* Slightly brighter labels */
+    font-weight: 500; /* Optional: slightly bolder labels */
+}
+/* --- End Contact Form Enhancements --- */
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) { /* Target small screens (tablets and mobiles) */
+    /* Hero Section Adjustments */
+    .page-header {
+        min-height: auto; /* Relax the 100vh requirement */
+        padding-top: 15vh;    /* Adjust top padding for content (was 20vh, reduced for balance) */
+        padding-bottom: 10vh; /* Add some bottom padding */
+        text-align: center; /* Center align hero content */
+    }
+
+    .page-header .profile-title {
+        font-size: 2.5rem; /* Reduce hero title size (was 2.8rem, adjusted) */
+        text-align: center; /* Ensure title is centered */
+    }
+
+    .page-header .profile-description {
+        font-size: 0.9rem; /* (was 0.95rem, adjusted) */
+        text-align: center; /* Center description text */
+        margin-left: auto; /* Center block if it has a max-width */
+        margin-right: auto;
+    }
+
+    .page-header .profile-image {
+         width: 50%; /* Example: reduce size if it's too large when stacked (was 60%) */
+         margin-top: 3rem; /* Add space above stacked image (was 2rem) */
+         margin-left: auto; /* Center the image */
+         margin-right: auto;
+    }
+
+    .page-header .btn-wrapper.profile {
+        justify-content: center; /* Center align buttons if they are in a flex container */
+    }
+
+    /* Typography Adjustments for Section Titles */
+    h1.work,
+    .section .card-plain .card-header .profile-title { /* Section Titles */
+        font-size: 2rem; /* (was 2.2rem, adjusted) */
+        letter-spacing: 0.25px; /* (was 0.5px) */
+    }
+
+    /* Project Showcase Adjustments */
+    .project-item {
+        margin-left: 0.5rem; 
+        margin-right: 0.5rem;
+        margin-bottom: 2rem; /* Ensure adequate vertical spacing (was 1.5rem) */
+    }
+
+    .project-overlay h4 {
+        font-size: 1.1rem; /* (was 1.15rem, adjusted) */
+    }
+
+    .project-overlay p {
+        font-size: 0.85rem; /* (was 0.8rem, adjusted) */
+    }
+
+    /* Contact Form Layout */
+    .section .card-plain .card-body {
+        padding-left: 10px; /* Reduce padding on smaller screens */
+        padding-right: 10px;
+    }
+    .section .card-plain .form-group {
+        padding-left: 0; /* Remove specific padding if it causes issues */
+        padding-right: 0;
+    }
+     .section .card-plain .col-md-6 { /* Ensure columns stack properly */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .section .card-plain .float-right { /* Center the button */
+        float: none !important;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 575.98px) { /* Extra small screens (mobiles) */
+    .page-header {
+        padding-top: 12vh; /* Further adjust padding */
+    }
+
+    .page-header .profile-title {
+        font-size: 2rem; /* (was 2.2rem, adjusted) */
+    }
+
+    .page-header .profile-description {
+        font-size: 0.85rem; /* (was 0.9rem, adjusted) */
+    }
+
+    .page-header .profile-image {
+         width: 55%; /* (was 50% to make it a bit smaller if needed) */
+    }
+    
+    h1.work,
+    .section .card-plain .card-header .profile-title {
+        font-size: 1.7rem; /* (was 1.8rem, adjusted) */
+    }
+
+    .project-overlay h4 {
+        font-size: 1rem; /* (was 1.1rem, adjusted) */
+    }
+
+    .project-overlay p {
+        font-size: 0.8rem; /* (was 0.85rem, adjusted) */
+    }
+}
+/* --- End Responsive Adjustments --- */
