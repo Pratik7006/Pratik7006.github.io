@@ -207,6 +207,7 @@ p {
     font-size: 3.8rem;  /* Increase for impact */
     font-weight: 700;   /* Make it bolder */
     letter-spacing: -1px; /* Optional: Tighten spacing for large display text */
+    margin-bottom: 2rem; /* Added margin-bottom to prevent overlap with description */
 }
 
 /* Typography Enhancements - Profile Description */
@@ -274,6 +275,7 @@ h1.work { /* This combines previous spacing with new typography */
     .page-header .profile-title {
         font-size: 2.5rem; /* Reduce hero title size (was 2.8rem, adjusted) */
         text-align: center; /* Ensure title is centered */
+        margin-bottom: 1.5rem; /* Adjusted from 2rem for smaller screens */
     }
 
     .page-header .profile-description {
@@ -345,6 +347,7 @@ h1.work { /* This combines previous spacing with new typography */
 
     .page-header .profile-title {
         font-size: 2rem; /* (was 2.2rem, adjusted) */
+        margin-bottom: 1rem; /* Further reduce for extra small screens */
     }
 
     .page-header .profile-description {
